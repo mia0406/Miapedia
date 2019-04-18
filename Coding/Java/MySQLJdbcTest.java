@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class MySqlTest {
+public class MySQLJdbcTest {
 
 	public static void main(String[] args) {
         Connection connection = null;
@@ -40,23 +40,25 @@ public class MySqlTest {
             st.close();
             connection.close();
             
-        } catch (SQLException se1) {
-            se1.printStackTrace();
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         } finally {
             try {
+				
                 if (st != null) {
                     st.close();
                 }
-            } catch (SQLException se2) {
+            } catch (SQLException e) {
             }
             try {
                 if (connection != null) {
+					
                     connection.close();
                 }
-            } catch (SQLException se) {
-                se.printStackTrace();
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
         }    
     }
