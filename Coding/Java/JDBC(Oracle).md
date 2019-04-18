@@ -1,5 +1,5 @@
 
-## JDBC 기본 6단계
+## JDBC(Oracle) 기본 6단계
 1. 드라이버 로딩
 ```java
 Class.forName("oracle.jdbc.driver.OracleDriver");
