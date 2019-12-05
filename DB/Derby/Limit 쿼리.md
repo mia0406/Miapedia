@@ -32,5 +32,5 @@ select * from employee fetch first 10 rows only;
 
 
 #### 참고 자료.
-https://razorsql.com/articles/derby_limit_rows.html
+https://razorsql.com/articles/derby_limit_rows.html  
 https://db.apache.org/derby/docs/10.13/ref/rrefsqljoffsetfetch.html
