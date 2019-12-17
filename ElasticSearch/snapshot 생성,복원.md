@@ -1,33 +1,5 @@
 
-1. 인덱스 조회
-```
-_cat/indices
-```
-
-
-2. Repository 추가
-```
-PUT /_snapshot/my_backup
-{
-  "type": "fs",
-  "settings": {
-    "compress": true,
-    "location": "/data_20191217/backup"
-  }
-}
-
-#curl -XPUT 'http://localhost:9200/_snapshot/my_backup' -d {
-  "type": "fs",
-  "settings": {
-     "location": "/data_20191217/backup",
-     "compress": true
-  }
-}'
-```
-* ```"acknowledged": true```라는 응답을 받아야만 정상적으로 작동한 것
-
-
-3. 스냅샷 만들기
+1. 스냅샷 만들기
 ```
 PUT /_snapshot/my_backup/[manysong_20170206]?wait_for_completion=true
 {
@@ -40,12 +12,12 @@ PUT /_snapshot/my_backup/[manysong_20170206]?wait_for_completion=true
 * wait_for_completion = true의 옵션을 주지 않으면 프로세스가 백그라운드로 실행된다.
 
 
-4. 스냅샷 확인
+2. 스냅샷 확인
 ```
 GET /_snapshot/my_backup/[manysong_20170206]/_status
 ```
 
-5. 스냅샷 복원
+3. 스냅샷 복원
 ```
 POST /_snapshot/my_backup/manysong_20170206/_restore
 {
