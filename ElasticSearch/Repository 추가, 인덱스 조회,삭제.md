@@ -32,3 +32,9 @@ curl -XDELETE 'http://localhost:9200/*'
 
 $ curl -XDELETE 'http://localhost:9200/_all'
 ```
+* 실수로 삭제를 하는 것을 막는 방법으로 elasticsearch.yml에서 삭제 방어를 설정할 있다.
+```xml
+# elasticsearch.yml
+action.destructive_requires_name: true
+```
+* 해당 내용을 설정 후 전체 삭제를 시도하려고 한다면 에러가 발생하면서 전체 삭제가 진행되지 않는다.
