@@ -17,3 +17,4 @@ PUT /_snapshot/my_backup
   }
 }'
 ```
+* "acknowledged": true라는 응답을 받아야만 정상적으로 작동한 것
