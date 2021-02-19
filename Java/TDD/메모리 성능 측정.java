@@ -7,7 +7,7 @@ public class MemoryTest {
 		long beforeTime = System.currentTimeMillis();
 		reportPerformanceFor("start", beforeTime);
 		
-    memoryTestCode();
+    		memoryTestCode();
     
 		reportPerformanceFor("method", beforeTime);
 		
@@ -20,7 +20,7 @@ public class MemoryTest {
 	
 	public static void memoryTestCode(){
     
-    // 메모리 성능 측정할 코드 작성
+    		// 메모리 성능 측정할 코드 작성
 		_logger1.debug("log4j debug level");
 	}
 	
