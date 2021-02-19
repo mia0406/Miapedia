@@ -15,5 +15,5 @@ public class SpeedTest {
 		System.out.println("시작 시간 = " + beforeTime);
 		System.out.println("종료 시간 = " + afterTime);
 		System.out.println("총 시간 = " + totalTime);
-  	}
+  	} 
 }
