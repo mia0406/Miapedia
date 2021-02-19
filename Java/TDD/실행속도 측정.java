@@ -6,7 +6,7 @@ public class SpeedTest {
 		
 		long beforeTime = System.currentTimeMillis();
 		
-    // 실행속도 측정 코드 작성
+    		// 실행속도 측정 코드 작성
 		_logger1.debug("log4j debug level");	
 		
 		long afterTime = System.currentTimeMillis();
@@ -15,5 +15,5 @@ public class SpeedTest {
 		System.out.println("시작 시간 = " + beforeTime);
 		System.out.println("종료 시간 = " + afterTime);
 		System.out.println("총 시간 = " + totalTime);
-  }
+  	}
 }
